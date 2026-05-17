@@ -1,3 +1,6 @@
+![ProofFlow](logo.png)
+
+
 # ProofFlow
 
 A GitHub App that brings structured RFC-based workflows to Lean 4 formalization projects — and optionally automates proof generation using AI.
@@ -76,71 +79,32 @@ If `.proofflow.yml` is absent, ProofFlow uses defaults but `senior_contributors`
 
 ## Installation
 
-### 1. Create the GitHub App
+### 1. Install the GitHub App
 
-Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) and create a new app with:
+Click **[Install ProofFlow](https://github.com/apps/proof-flow)** and select the repositories you want to use it with.
 
-**Permissions:**
-| Permission | Level |
-|---|---|
-| Issues | Read & write |
-| Pull requests | Read & write |
-| Checks | Read & write |
-| Contents | Read & write |
-| Metadata | Read-only |
+That's it — no server setup required. ProofFlow runs as a hosted service.
 
-**Webhook events to subscribe:**
-- `issues`
-- `issue_comment`
-- `pull_request`
-- `check_run`
-- `installation`
+### 2. Configure your repo
 
-Set the Webhook URL to your deployment URL (e.g. `https://your-app.fly.dev/`). Generate and save a Webhook Secret.
+Add a `.proofflow.yml` file to your repo root:
 
-Download the private key (`.pem` file) from the App settings page.
-
-### 2. Deploy to Fly.io
-
-```sh
-# Clone the repo
-git clone https://github.com/YOUR_ORG/proofflow
-cd proofflow
-
-# Create the Fly app and database
-fly launch --name proofflow
-fly postgres create --name proofflow-db
-fly postgres attach --app proofflow proofflow-db
-
-# Set secrets
-fly secrets set APP_ID=<your-app-id>
-fly secrets set PRIVATE_KEY="$(cat proofflow.pem)"
-fly secrets set WEBHOOK_SECRET=<your-webhook-secret>
-fly secrets set ANTHROPIC_API_KEY=<your-anthropic-key>
-
-# Optional: enable Aristotle for autonomous proof generation
-fly secrets set ARISTOTLE_API_KEY=<your-aristotle-key>
-
-# Deploy (migrations run automatically)
-fly deploy
+```yaml
+senior_contributors:
+  - your-github-username
 ```
 
-### 3. Install on your Lean repo
+See the [Configuration](#configuration) section above for all available options.
 
-From the GitHub App settings page, install the app on the repositories you want to use it with. Add `.proofflow.yml` to each repo.
+### 3. Add the RFC issue template (optional but recommended)
+
+See the [RFC template](#rfc-template) section below. This pre-fills the required sections when contributors open a new issue.
 
 ---
 
-## Environment variables
+## Self-hosting
 
-| Variable | Required | Description |
-|---|---|---|
-| `APP_ID` | Yes | GitHub App ID |
-| `PRIVATE_KEY` | Yes | GitHub App private key (full PEM) |
-| `WEBHOOK_SECRET` | Yes | GitHub webhook secret |
-| `DATABASE_URL` | Yes | PostgreSQL connection string (set automatically by Fly postgres attach) |
-| `ANTHROPIC_API_KEY` | Yes | Claude API key (used when Aristotle is not configured) |
-| `ARISTOTLE_API_KEY` | No | Aristotle API key for autonomous proof generation |
+If you prefer to run your own instance, see [SELF_HOSTING.md](SELF_HOSTING.md).
 
 ---
 

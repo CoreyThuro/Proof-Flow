@@ -1,0 +1,1 @@
+{"version":3,"file":"pullRequestSynchronize.d.ts","sourceRoot":"","sources":["../../src/handlers/pullRequestSynchronize.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,QAAQ,CAAC;AAItC,wBAAsB,4BAA4B,CAChD,OAAO,EAAE,OAAO,CAAC,0BAA0B,CAAC,GAC3C,OAAO,CAAC,IAAI,CAAC,CAYf"}

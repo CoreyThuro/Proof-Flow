@@ -1,0 +1,1 @@
+{"version":3,"file":"lgtmDetector.js","sourceRoot":"","sources":["../../src/rfc/lgtmDetector.ts"],"names":[],"mappings":";;AAEA,sCAOC;AAPD,SAAgB,aAAa,CAC3B,IAAY,EACZ,cAAsB,EACtB,MAAuB;IAEvB,IAAI,CAAC,UAAU,CAAC,IAAI,CAAC,IAAI,CAAC;QAAE,OAAO,KAAK,CAAC;IACzC,OAAO,MAAM,CAAC,kBAAkB,CAAC,QAAQ,CAAC,cAAc,CAAC,CAAC;AAC5D,CAAC"}

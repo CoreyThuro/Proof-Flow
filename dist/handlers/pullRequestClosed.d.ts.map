@@ -1,0 +1,1 @@
+{"version":3,"file":"pullRequestClosed.d.ts","sourceRoot":"","sources":["../../src/handlers/pullRequestClosed.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,QAAQ,CAAC;AAKtC,wBAAsB,uBAAuB,CAC3C,OAAO,EAAE,OAAO,CAAC,qBAAqB,CAAC,GACtC,OAAO,CAAC,IAAI,CAAC,CAgBf"}

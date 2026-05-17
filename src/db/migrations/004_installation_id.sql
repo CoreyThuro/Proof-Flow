@@ -1,0 +1,1 @@
+ALTER TABLE repos ADD COLUMN IF NOT EXISTS installation_id BIGINT;

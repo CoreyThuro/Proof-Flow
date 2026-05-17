@@ -1,4 +1,4 @@
-![ProofFlow](logo.png)
+![ProofFlow](Proof Flow.png)
 
 
 # ProofFlow

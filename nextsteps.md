@@ -168,20 +168,8 @@ This would make theorem suggestion much less naive.
 
 ---
 
-## 10. Future Hyri / Proof Pod Angle
-If later connected to Hyri, ProofFlow could become the engine for a **proof workflow pod**:
 
-- theorem proposal
-- critique
-- decomposition
-- proof attempt
-- CI/checker result
-- retry / revision
-- acceptance
 
-In that setting, Hyri would be the cockpit and ProofFlow the theorem-governance engine.
-
----
 
 ## Minimal Practical Next Step
 The most concrete near-term next step is probably:

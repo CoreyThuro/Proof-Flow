@@ -9,6 +9,7 @@ Contributors propose theorems via GitHub issues. Maintainers review and approve 
 
 This project was inspired by a talk given by Terrence Tao uploaded on May 13 2026
 
+Here is a how-to video I made: https://youtu.be/U9cOowuspoU
 
 ---
 

@@ -8,6 +8,8 @@ A GitHub App that brings structured RFC-based workflows to Lean 4 formalization 
 Contributors propose theorems via GitHub issues. Maintainers review and approve them. Once approved, an AI agent (powered by [Aristotle](https://aristotle.harmonic.fun) or Claude) writes the Lean 4 proof, opens a draft PR, and waits for CI. When CI passes, the PR is promoted for human review and merged.
 
 This project was inspired by a talk given by Terrence Tao uploaded on May 13 
+
+
 ---
 
 ## How it works
